@@ -1,9 +1,10 @@
-Code Repository for Spherical Signal Super-resolution with Proportioned Optimisation (S3PO) model.
+# Spherical Signal Super-resolution with Proportioned Optimisation (S3PO)
 
-Refer to the paper for details - https://www.techrxiv.org/articles/preprint/Omnidirectional_Video_Super-Resolution_using_Deep_Learning/20494851
+Code Repository for S3PO video super-resolution model for panaromic videos accepted to be published at **IEEE Transactions on Multimedia** entitled **"Omnidirectional Video Super-resolution using Deep Learning"**.
 
-To use this work or dataset cite:
+Please refer to the paper for details - https://www.techrxiv.org/articles/preprint/Omnidirectional_Video_Super-Resolution_using_Deep_Learning/20494851
 
+To use this work or dataset please cite our paper:
 
 @article{Agrahari Baniya2023,
 author = "Arbind Agrahari Baniya and Glory Lee and Peter Eklund and Sunil Aryal",
