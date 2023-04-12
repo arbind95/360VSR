@@ -7,6 +7,7 @@ Download the dataset from -
 Please refer to the paper for dataset details - https://www.techrxiv.org/articles/preprint/Omnidirectional_Video_Super-Resolution_using_Deep_Learning/20494851
 
 Please cite the following paper if you use this dataset:
+
 @article{Agrahari Baniya2023,
 author = "Arbind Agrahari Baniya and Glory Lee and Peter Eklund and Sunil Aryal",
 title = "{Omnidirectional Video Super-Resolution using Deep Learning}",
