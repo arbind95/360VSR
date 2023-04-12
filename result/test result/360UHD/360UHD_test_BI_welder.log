@@ -1,0 +1,152 @@
+Namespace(cuda=True, file_list='test.txt', frame=1, gpus=2, image_out='./out/', layer=15, other_dataset=False, pretrain='./result/weight/2022-05-31-17-40/STIFS_3_localX4_15L_64_epoch_145.pth', save_test_log='./log/test', scale=4, seed=0, select=0, test_dir='/home/aagraharibaniya/360VSR/360Videos/HQ_Test_Frames/', testbatchsize=1, threads=32, vid='Welder-Scene-001_frames', window=3)
+ResConvo(
+  (neuro): neuro(
+    (feats): Feat_Extract(
+      (conv_iden1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv_iden2): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv_iden3): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_f1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_f1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_f2): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_f2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_f3): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_f3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (feat_set1): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (feat_set2): Conv2d(256, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv_sa): Conv2d(256, 128, kernel_size=(7, 7), stride=(1, 1), padding=(3, 3), bias=False)
+      (lrelu): LeakyReLU(negative_slope=0.1, inplace=True)
+      (sigmoid): Sigmoid()
+      (conv_ca_avg1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (conv_ca_avg2): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (conv_ca_max1): Conv2d(128, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (conv_ca_max2): Conv2d(32, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    )
+    (conv_cat): Conv2d(179, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (recon_trunk1): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk2): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk3): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk4): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk5): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk6): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk7): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk8): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk9): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (recon_trunk10): ResidualBlock_noBN(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv1_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (conv2_l): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+    (conv_res1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (conv_res2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (conv_loc1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (conv_loc2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (upconv1): Conv2d(128, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (upconv2): Conv2d(128, 48, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv_last1): Conv2d(6, 6, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv_last2): Conv2d(6, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (down): PixelUnShuffle(upscale_factor=4)
+)
+Model size: 8.89168M
+===> 10L model has been initialized
+===> load pretrained model
+===> pretrained model is load
+===> Loading test Datasets
+===> DataLoading Finished
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+torch.Size([1, 3, 540, 960])
+===> Timer: 4.3930 sec.
+PSNR: 33.826502 dB, 	SSIM: 0.939947, 	WS-PSNR: 33.298585, 	WS-SSIM: 0.940091
+PSNR: 33.918234 dB, 	SSIM: 0.941708, 	WS-PSNR: 33.366132, 	WS-SSIM: 0.941494
+PSNR: 33.953787 dB, 	SSIM: 0.942222, 	WS-PSNR: 33.393516, 	WS-SSIM: 0.941893
+PSNR: 33.966888 dB, 	SSIM: 0.942501, 	WS-PSNR: 33.397517, 	WS-SSIM: 0.942036
+PSNR: 33.938868 dB, 	SSIM: 0.942039, 	WS-PSNR: 33.365091, 	WS-SSIM: 0.941559
+PSNR: 34.016001 dB, 	SSIM: 0.943440, 	WS-PSNR: 33.426188, 	WS-SSIM: 0.942672
+PSNR: 33.984845 dB, 	SSIM: 0.942843, 	WS-PSNR: 33.388964, 	WS-SSIM: 0.942030
+PSNR: 33.977402 dB, 	SSIM: 0.942994, 	WS-PSNR: 33.377667, 	WS-SSIM: 0.942063
+PSNR: 33.944786 dB, 	SSIM: 0.942416, 	WS-PSNR: 33.348975, 	WS-SSIM: 0.941651
+PSNR: 34.074119 dB, 	SSIM: 0.944488, 	WS-PSNR: 33.466867, 	WS-SSIM: 0.943543
+PSNR: 34.116632 dB, 	SSIM: 0.945007, 	WS-PSNR: 33.506985, 	WS-SSIM: 0.944004
+PSNR: 34.087464 dB, 	SSIM: 0.944766, 	WS-PSNR: 33.478098, 	WS-SSIM: 0.943808
+PSNR: 34.034159 dB, 	SSIM: 0.943664, 	WS-PSNR: 33.436650, 	WS-SSIM: 0.942943
+PSNR: 34.060836 dB, 	SSIM: 0.944284, 	WS-PSNR: 33.456351, 	WS-SSIM: 0.943425
+PSNR: 34.052111 dB, 	SSIM: 0.944108, 	WS-PSNR: 33.446721, 	WS-SSIM: 0.943289
+PSNR: 34.039818 dB, 	SSIM: 0.943978, 	WS-PSNR: 33.435183, 	WS-SSIM: 0.943136
+PSNR: 34.005427 dB, 	SSIM: 0.943287, 	WS-PSNR: 33.407655, 	WS-SSIM: 0.942584
+PSNR: 34.002046 dB, 	SSIM: 0.943380, 	WS-PSNR: 33.402002, 	WS-SSIM: 0.942601
+PSNR: 34.005798 dB, 	SSIM: 0.943522, 	WS-PSNR: 33.402897, 	WS-SSIM: 0.942684
+PSNR: 33.999472 dB, 	SSIM: 0.943278, 	WS-PSNR: 33.400428, 	WS-SSIM: 0.942562
+===>Welder-Scene-001_frames PSNR = 34.000259707216316
+===>Welder-Scene-001_frames SSIM = 0.9431936347721791
+===>Welder-Scene-001_frames WS-PSNR = 33.41012367055458
+===>Welder-Scene-001_frames WS-SSIM = 0.9425034247032118
+===>Welder-Scene-001_frames LPISP = 0.0
+==> Average PSNR = 34.000260
+==> Average SSIM = 0.943194
+==> Average WS-PSNR = 33.410124
+==> Average WS-SSIM = 0.942503
+==> Average LPIPS = 0.000000
