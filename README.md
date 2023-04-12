@@ -1,6 +1,6 @@
 # Spherical Signal Super-resolution with Proportioned Optimisation (S3PO)
 
-Code Repository for S3PO video super-resolution model for panaromic videos accepted to be published at **IEEE Transactions on Multimedia** entitled **"Omnidirectional Video Super-resolution using Deep Learning"**.
+Code Repository for S3PO video super-resolution model for panaromic videos accepted to be published in **IEEE Transactions on Multimedia** entitled **"Omnidirectional Video Super-resolution using Deep Learning"**.
 
 Please refer to the paper for details - https://www.techrxiv.org/articles/preprint/Omnidirectional_Video_Super-Resolution_using_Deep_Learning/20494851
 
