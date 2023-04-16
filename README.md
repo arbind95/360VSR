@@ -6,6 +6,16 @@ Please refer to the paper for details - https://www.techrxiv.org/articles/prepri
 
 To use this work or dataset please cite our paper:
 
+@ARTICLE{10102571,
+  author={Baniya, Arbind Agrahari and Lee, Tsz-Kwan and Eklund, Peter W. and Aryal, Sunil},
+  journal={IEEE Transactions on Multimedia}, 
+  title={Omnidirectional Video Super-Resolution using Deep Learning}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-15},
+  doi={10.1109/TMM.2023.3267294}}
+
 @article{Agrahari Baniya2023,
 author = "Arbind Agrahari Baniya and Glory Lee and Peter Eklund and Sunil Aryal",
 title = "{Omnidirectional Video Super-Resolution using Deep Learning}",
